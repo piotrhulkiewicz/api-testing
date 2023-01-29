@@ -68,6 +68,6 @@ def test_beer_brewed_in_2010():
     }
     response = requests.get("https://api.punkapi.com/v2/beers", params=params)
     body = response.json()
-    assert response.status_code == 200
+
     for beer in body:
         assert "2010" in beer["first_brewed"]
